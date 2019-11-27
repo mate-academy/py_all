@@ -1,6 +1,8 @@
-from typing import Callable, Iterable, Any, List
-import functools
+"""import"""
+from typing import Iterable
+from functools import reduce
 
 
-def all(l: Iterable[bool]) -> bool:
-    return 0
+def all_(lst: Iterable[bool]) -> bool:
+    """all"""
+    return reduce(lambda first, second: first and second, lst)
