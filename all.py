@@ -1,6 +1,12 @@
-from typing import Callable, Iterable, Any, List
-import functools
+"""Custom function all module"""
+from typing import Iterable
+from functools import reduce
 
 
-def all(l: Iterable[bool]) -> bool:
-    return 0
+def all_(lst: Iterable[bool]) -> bool:
+    """
+    Custom function all
+    :param lst: list for check
+    :return: True or False
+    """
+    return reduce(lambda x, y: x and y, lst)
