@@ -1,6 +1,15 @@
-from typing import Callable, Iterable, Any, List
-import functools
+"""
+module all
+"""
+
+from typing import Iterable
+from functools import reduce
 
 
-def all(l: Iterable[bool]) -> bool:
-    return 0
+def all_(lst: Iterable[bool]) -> bool:
+    """
+    Implementation of built-in all() function using reduce().
+    :param lst: Iterable[bool]
+    :return: bool
+    """
+    return reduce(lambda x, y: x if x is True and y is True else False, lst)
