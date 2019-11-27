@@ -1,6 +1,13 @@
-from typing import Callable, Iterable, Any, List
+"""docstring"""
+from typing import Iterable
 import functools
 
 
-def all(l: Iterable[bool]) -> bool:
-    return 0
+def all_(iterable: Iterable[bool]) -> bool:
+    """
+    Returns True if all elements in the iterable are True
+    otherwise, returns False
+    :param iterable: Iterable[bool]
+    :return: bool
+    """
+    return functools.reduce(lambda a, b: a and b, iterable)
