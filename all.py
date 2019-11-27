@@ -1,10 +1,8 @@
 """import"""
 from typing import Iterable
+from functools import reduce
 
 
 def all_(lst: Iterable[bool]) -> bool:
     """all"""
-    for ele in lst:
-        if not ele:
-            return False
-    return True
+    return reduce(lambda first, second: first and second, lst)
