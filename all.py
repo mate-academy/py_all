@@ -12,4 +12,4 @@ def all_(lst: Iterable[bool]) -> bool:
     :param lst: Iterable[bool]
     :return: bool
     """
-    return reduce(lambda x, y: x if x is True and y is True else False, lst)
+    return reduce(lambda x, y: x and y is True, lst)
