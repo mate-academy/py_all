@@ -1,6 +1,13 @@
-from typing import Callable, Iterable, Any, List
+"""
+all
+"""
+from typing import Iterable
 import functools
 
 
-def all(l: Iterable[bool]) -> bool:
-    return 0
+def all_(items: Iterable[bool]) -> bool:
+    """
+    :param items: list
+    :return: is all items true
+    """
+    return functools.reduce(lambda _, y: bool(y), items)
