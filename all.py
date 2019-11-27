@@ -1,6 +1,12 @@
-from typing import Callable, Iterable, Any, List
+"""
+Create your own implementation of built-in all() function using
+"""
+
+
+from typing import Iterable
 import functools
 
 
-def all(l: Iterable[bool]) -> bool:
-    return 0
+def all_(lst: Iterable[bool]) -> bool:
+    """My function all()"""
+    return functools.reduce(lambda first, second: first and second, lst)
