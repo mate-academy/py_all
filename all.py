@@ -1,6 +1,8 @@
-from typing import Callable, Iterable, Any, List
+"""more docstrings"""
+#from typing import Callable, Iterable, Any, List
 import functools
 
 
-def all(l: Iterable[bool]) -> bool:
-    return 0
+def new_all(initial_list):
+    """docstring"""
+    return functools.reduce(lambda x, y: x and y, initial_list)

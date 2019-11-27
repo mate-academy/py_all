@@ -2,12 +2,12 @@ import all
 
 
 def test_true():
-    assert all.all([True, True]) == True
+    assert all.new_all([True, True]) == True
 
 
 def test_false():
-    assert all.all([True, False]) == False
+    assert all.new_all([True, False]) == False
 
 
 def test_one_item():
-    assert all.all([True]) == True
+    assert all.new_all([True]) == True
