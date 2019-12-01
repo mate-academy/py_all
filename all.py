@@ -1,6 +1,9 @@
-from typing import Callable, Iterable, Any, List
-import functools
+"""docstring"""
+from typing import Iterable
+from functools import reduce
 
 
-def all(l: Iterable[bool]) -> bool:
-    return 0
+def all_item(list_item: Iterable[bool]) -> bool:
+    """return true if only all items is true"""
+
+    return reduce(lambda x, y: x and y, list_item)
